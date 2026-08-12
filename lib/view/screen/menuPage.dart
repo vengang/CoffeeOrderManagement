@@ -15,8 +15,6 @@ class Menupage extends StatefulWidget {
 class _MenupageState extends State<Menupage> {
   @override
   Widget build(BuildContext context) {
-    final allItems = menu.expand((category) => category.items).toList();
-
     return Scaffold(
       appBar: AppBar(
         actionsPadding: EdgeInsets.only(right: 8),
@@ -37,7 +35,7 @@ class _MenupageState extends State<Menupage> {
           children: [
             buildCategory(),
             SizedBox(height: 8),
-            buildDetailItems(allItems),
+            buildDetailItems(menu),
           ],
         ),
       ),
@@ -148,7 +146,7 @@ class _MenupageState extends State<Menupage> {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
               color: Appcolor.primary,
-              borderRadius: BorderRadius.circular(20), 
+              borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withValues(alpha: .05),
@@ -159,7 +157,7 @@ class _MenupageState extends State<Menupage> {
             ),
             child: Center(
               child: Text(
-                category.name,
+                category.category,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Appcolor.surface,

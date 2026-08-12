@@ -1,3 +1,4 @@
+import 'package:coffeeapp/view/screen/caradPage.dart';
 import 'package:coffeeapp/view/screen/homePage.dart';
 import 'package:coffeeapp/view/screen/menuPage.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class Parentscreen extends StatelessWidget {
           item: ItemConfig(icon: Icon(Icons.coffee_outlined), title: "Menu"),
         ),
         PersistentTabConfig(
-          screen: Homepage(),
+          screen: CartPage(),
           item: ItemConfig(
             icon: Icon(Icons.shopping_cart_outlined),
             title: "Cart",
