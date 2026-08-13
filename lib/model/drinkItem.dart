@@ -8,7 +8,9 @@ class Drinkitem {
 
   final List<int> sugarLevels;
   final List<String> iceOptions;
-  final bool hasCoffee; 
+  final bool hasCoffee;
+  final double extraShotPrice;
+  final String category;
 
   Drinkitem({
     required this.title,
@@ -19,5 +21,7 @@ class Drinkitem {
     required this.sugarLevels,
     required this.iceOptions,
     required this.hasCoffee,
+    this.extraShotPrice = 0.50,
+    required this.category,
   });
 }
