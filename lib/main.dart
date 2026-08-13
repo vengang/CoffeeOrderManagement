@@ -1,11 +1,12 @@
 import 'package:coffeeapp/view/parentScreen.dart';
+import 'package:coffeeapp/view/screen/login_screen.dart';
+import 'package:coffeeapp/view/screen/singup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  
   runApp(MyApp());
 }
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(textTheme: GoogleFonts.interTextTheme()),
       debugShowCheckedModeBanner: false,
-      home: Parentscreen(),
+      home: LoginScreen(),
     );
   }
 }

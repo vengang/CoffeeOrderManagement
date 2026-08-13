@@ -1,6 +1,8 @@
 import 'package:coffeeapp/view/screen/caradPage.dart';
 import 'package:coffeeapp/view/screen/homePage.dart';
+import 'package:coffeeapp/view/screen/login_screen.dart';
 import 'package:coffeeapp/view/screen/menuPage.dart';
+import 'package:coffeeapp/view/screen/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
@@ -27,14 +29,14 @@ class Parentscreen extends StatelessWidget {
           ),
         ),
         PersistentTabConfig(
-          screen: Homepage(),
+          screen: ProfileScreen(),
           item: ItemConfig(
             icon: Icon(Icons.receipt_long_outlined),
             title: "Orders",
           ),
         ),
         PersistentTabConfig(
-          screen: Homepage(),
+          screen: ProfileScreen(),
           item: ItemConfig(icon: Icon(Icons.person_outline), title: "Profile"),
         ),
       ],
