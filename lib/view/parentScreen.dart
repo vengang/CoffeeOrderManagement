@@ -1,6 +1,5 @@
 import 'package:coffeeapp/view/screen/caradPage.dart';
 import 'package:coffeeapp/view/screen/homePage.dart';
-import 'package:coffeeapp/view/screen/login_screen.dart';
 import 'package:coffeeapp/view/screen/menuPage.dart';
 import 'package:coffeeapp/view/screen/orderHistoryPage.dart';
 import 'package:coffeeapp/view/screen/profile_screen.dart';

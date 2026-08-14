@@ -1,6 +1,4 @@
-import 'package:coffeeapp/view/parentScreen.dart';
 import 'package:coffeeapp/view/screen/login_screen.dart';
-import 'package:coffeeapp/view/screen/singup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
