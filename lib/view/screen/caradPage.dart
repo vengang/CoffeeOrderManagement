@@ -1,5 +1,6 @@
 import 'package:coffeeapp/const/appColor.dart';
 import 'package:coffeeapp/controller/cardController.dart';
+import 'package:coffeeapp/controller/orderController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,7 @@ class CartPage extends StatefulWidget {
 
 class _CartPageState extends State<CartPage> {
   final CartController controller = Get.put(CartController());
-
+  final OrderController orderController = Get.put(OrderController());
   int selectedPayment = 0;
 
   @override
@@ -417,7 +418,10 @@ class _CartPageState extends State<CartPage> {
                   if (Get.isDialogOpen ?? false) {
                     Get.back();
                   }
-                  // controller.cartItems.clear();
+                  // Save
+                  orderController.addOrders(List.from(controller.cartItems));
+
+                  controller.cartItems.clear();
                 });
               });
             },
