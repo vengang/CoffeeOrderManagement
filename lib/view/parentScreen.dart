@@ -1,3 +1,4 @@
+import 'package:coffeeapp/const/appColor.dart';
 import 'package:coffeeapp/view/screen/caradPage.dart';
 import 'package:coffeeapp/view/screen/homePage.dart';
 import 'package:coffeeapp/view/screen/menuPage.dart';
@@ -15,17 +16,26 @@ class Parentscreen extends StatelessWidget {
       tabs: [
         PersistentTabConfig(
           screen: Homepage(),
-          item: ItemConfig(icon: Icon(Icons.home_outlined), title: "Home"),
+          item: ItemConfig(
+            icon: Icon(Icons.home_outlined),
+            title: "Home",
+            activeForegroundColor: Appcolor.primary,
+          ),
         ),
         PersistentTabConfig(
           screen: Menupage(),
-          item: ItemConfig(icon: Icon(Icons.coffee_outlined), title: "Menu"),
+          item: ItemConfig(
+            icon: Icon(Icons.coffee_outlined),
+            title: "Menu",
+            activeForegroundColor: Appcolor.primary,
+          ),
         ),
         PersistentTabConfig(
           screen: CartPage(),
           item: ItemConfig(
             icon: Icon(Icons.shopping_cart_outlined),
             title: "Cart",
+            activeForegroundColor: Appcolor.primary,
           ),
         ),
         PersistentTabConfig(
@@ -33,12 +43,17 @@ class Parentscreen extends StatelessWidget {
           item: ItemConfig(
             icon: Icon(Icons.receipt_long_outlined),
             title: "Orders",
+            activeForegroundColor: Appcolor.primary,
           ),
         ),
         PersistentTabConfig(
           screen: ProfileScreen(),
 
-          item: ItemConfig(icon: Icon(Icons.person_outline), title: "Profile"),
+          item: ItemConfig(
+            icon: Icon(Icons.person_outline),
+            title: "Profile",
+            activeForegroundColor: Appcolor.primary,
+          ),
         ),
       ],
       navBarBuilder: (navBarConfig) =>
