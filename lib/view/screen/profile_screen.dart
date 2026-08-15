@@ -1,5 +1,6 @@
 import 'package:coffeeapp/const/appColor.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -198,15 +199,6 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       onTap: () {},
                     ),
-                    Divider(height: 1, indent: 16, endIndent: 16),
-                    ListTile(
-                      leading: Icon(
-                        Icons.dark_mode_outlined,
-                        color: Appcolor.textPrimary,
-                      ),
-                      title: Text("Dark Mode"),
-                      trailing: Switch(value: false, onChanged: (val) {}),
-                    ),
                   ],
                 ),
               ),
@@ -242,7 +234,9 @@ class ProfileScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.back();
+                  },
                   icon: Icon(Icons.logout, color: Colors.redAccent, size: 20),
                   label: Text(
                     "Log Out",

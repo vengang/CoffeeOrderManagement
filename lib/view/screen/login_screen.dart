@@ -12,6 +12,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final String email = "admin@gmail.com";
+  final String pass = "admin123";
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   bool isPasswordObscure = true;
@@ -307,7 +309,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.to(() => SignupScreen());
+                        if (emailController.text.trim() == email &&
+                            passwordController.text == pass) {
+                          Get.to(() => SignupScreen());
+                        } else {
+                          Get.snackbar(
+                            "Login Failed",
+                            "Email or password is incorrect",
+                            snackPosition: SnackPosition.BOTTOM,
+                          );
+                        }
                       },
                       child: Text(
                         "Sign Up",
